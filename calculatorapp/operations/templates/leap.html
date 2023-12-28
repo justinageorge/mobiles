@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>leap year</h1>
+    <div class="container">
+        <form action="" method="post">
+            {%csrf_token%}
+            <div>
+        <label for="">year</label>    
+        <input type="text" name="year" placeholder="enter a year">
+    </div>
+    <div>
+        <button type="submit">find</button>
+    </div>
+
+        </form>
+        {{output}}
+    </div>
+</body>
+</html>

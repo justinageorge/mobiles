@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <h1 class="h">check your bmi</h1>
+    <div class="container">
+        <div class="a">
+            <form action="" method="post">
+                {%csrf_token%}
+                <div class="b">
+                    <label for="">weight</label>
+                    <input type="text" name="weight" placeholder="enter your weight in kg here">
+                </div>
+                <div clas="c">
+                    <label for="">height</label>
+                    <input type="text" name="height" placeholder="enter your height in cm here">
+                </div>
+                <div class="d">
+                    <button  type="submit">bmi</button>
+                </div>
+            </form>
+            {{out}}
+        </div>
+    </div>
+</body>
+</html>

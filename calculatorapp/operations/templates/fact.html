@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>factorial</h1>
+    <div class="container">
+        <form action="" method="post">
+            {%csrf_token%}
+            <div>
+                <label for="">num</label>
+                <input type="text" name="num" placeholder="enter number ">
+            </div>
+            
+            <div>
+                <button type="submit">factorial</button>
+            </div>
+
+        </form>
+        {{output}}
+    </div>
+</body>
+</html>

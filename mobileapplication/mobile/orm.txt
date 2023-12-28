@@ -1,0 +1,40 @@
+
+class Mobiles(models.Model):
+    name=models.CharField(max_length=200,unique=True)
+    price=models.PositiveIntegerField()
+    brand=models.CharField(max_length=200)
+    specs=models.CharField(max_length=200)
+    display=models.CharField(max_length=200)
+
+ORM queries    
+eg:
+Mobiles.objects.create(name="samsungm3",price=15000,specs="24h battery charge", display="amolquad", brand="samsung")
+query for listing all Mobiles
+models.objects.all()
+qs=Mobiles.objects.all()
+qs
+qs=ModelName.objects.get(id=2)
+orm query for filtering objects
+qs=Mobiles.objects.filter(name="samsung")
+
+field lookup
+<= lte
+>= gte 
+< lt 
+> gt 
+qs=Mobiles.objects.filter(price__lte=50000)
+qs=Mobiles.objects.filter(price__gt=60000)
+qs=Mobiles.objects.exclude(brand="samsung")
+orm query for deleting an object
+Mobiles.objects.filter(id=2).delete()
+
+
+to update an object
+Mobiles.objects.filter(id=1).update(price=25000,specs="18gb")
+to sort all mobiles in ascending order based on their price
+qs=Mobiles.objects.all().order_by("price")
+descending order
+qs=Mobiles.objects.all().order_by("-price")
+to take all brands
+> qs=Mobiles.objects.all().values_list("brand",flat=True) 
+ 

@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card bg-danger-subtle " style="width: 18rem;">
+      {%if data.picture%}
+        <img src="{{data.picture.url}}" alt="" height="300px" >
+      {%endif%}
+        <div class="card-header">
+            <i class="fa-sharp fa-solid fa-mobile"></i> Name:{{data.name}}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="fa-solid fa-tag"></i> price:{{data.price}}</li>
+          <li class="list-group-item">brands:{{data.brand}}</li>
+          <li class="list-group-item">specs:{{data.specs}}</li>
+          <li class="list-group-item">display:{{data.display}}</li>
+        </ul>
+      </div>
+</div>
+
+{%endblock%}

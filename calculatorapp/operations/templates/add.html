@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>addition</h1>
+    <div class="container">
+        <form action="" method="post">
+            {%csrf_token%}
+            <div>
+            <label for="">num1</label>
+            <input type="text" name="num1" placeholder="enter number 1">
+        </div>
+        <div>
+            <label for="">num2</label>
+            <input type="text" name="num2" placeholder="enter number2">
+        </div>
+        <div>
+            <button type="submit">add</button>
+        </div>
+            
+        </form>
+        {{output}}
+    </div>
+</body>
+</html>
